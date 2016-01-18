@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="strutsqs" extends="struts-default">
+		<action name="Login" class="cn.lw.LoginAction">
+			<result name="error">/error.jsp</result>
+			<result name="success">/welcome.jsp</result>
+		</action>
+		<action name="ClientLogin" class="cn.lw.LoginAction" method="userid" />
+		<action name="GetDetail" class="cn.lw.GetDetailAction">
+			<result name="success">/showDetail.jsp</result>
+			<result name="login">/index.jsp</result>
+		</action>
+		<action name="ClientGetDetail" class="cn.lw.GetDetailAction"
+			method="ClientGetDetail" />
+		<action name="Test" class="cn.lw.TestAction"></action>
+		<action name="Synchronization" class="cn.lw.SynchronizationAction"></action>
+		<action name="CheckSession" class="cn.lw.LoginAction" method="checkSessionId" />
+
+		<action name="ClientCheckUsername" class="cn.lw.RegisterAction"
+			method="validateUsername" />
+		<action name="ClientRegister" class="cn.lw.RegisterAction"
+			method="register" />
+	</package>
+</struts>
