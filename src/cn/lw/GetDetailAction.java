@@ -128,6 +128,7 @@ public class GetDetailAction implements Action {
 				detailItem.setLastModifyDate(resultSet
 						.getTimestamp("last_modify_date").toString()
 						.substring(0, 19));
+				detailItem.setDayDetailUsername(user);
 				list.add(detailItem);
 			}
 		} catch (SQLException e) {
