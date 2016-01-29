@@ -24,5 +24,14 @@
 			method="validateUsername" />
 		<action name="ClientRegister" class="cn.lw.RegisterAction"
 			method="register" />
+
+		<action name="ClientLoadTreeHole" class="cn.lw.LoadTreeHoleAction"
+			method="LoadTreeHole" />
+
+		<action name="ClientPraise" class="cn.lw.PraiseAction" method="Praise" />
+		<action name="ClientLoadComments" class="cn.lw.LoadCommentsAction"
+			method="LoadComments" />
+		<action name="ClientIssueTreeHole" class="cn.lw.IssueTreeHoleAction"
+			method="IssueTreeHole" />
 	</package>
 </struts>
